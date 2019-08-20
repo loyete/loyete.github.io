@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="轻鸿日记">
 <meta property="og:description" content="Java基础回顾总结：数据类型，运算符，分支结构，循环语句部分内容的一些回顾">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-20T09:33:06.656Z">
+<meta property="og:updated_time" content="2019-08-20T09:34:45.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础语法回顾（一）">
 <meta name="twitter:description" content="Java基础回顾总结：数据类型，运算符，分支结构，循环语句部分内容的一些回顾">
@@ -549,6 +549,30 @@ gitment.render('gitmentContainer')
   
   
   <!-- 目录内容 -->
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java基础回顾总结："><span class="toc-number">1.</span> <span class="toc-text">Java基础回顾总结：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常量："><span class="toc-number">1.1.</span> <span class="toc-text">常量：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型"><span class="toc-number">1.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型转换"><span class="toc-number">1.3.</span> <span class="toc-text">数据类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number">1.4.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、-算术运算符："><span class="toc-number">1.4.1.</span> <span class="toc-text">1、 算术运算符：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、-赋值运算符："><span class="toc-number">1.4.2.</span> <span class="toc-text">2、 赋值运算符：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、-关系运算符："><span class="toc-number">1.4.3.</span> <span class="toc-text">3、 关系运算符：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、-逻辑运算符："><span class="toc-number">1.4.4.</span> <span class="toc-text">4、 逻辑运算符：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、-三元运算符："><span class="toc-number">1.4.5.</span> <span class="toc-text">5、 三元运算符：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支结构"><span class="toc-number">1.5.</span> <span class="toc-text">分支结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、-顺序结构"><span class="toc-number">1.5.1.</span> <span class="toc-text">1、 顺序结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、-if语句"><span class="toc-number">1.5.2.</span> <span class="toc-text">2、 if语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、-switch语句"><span class="toc-number">1.5.3.</span> <span class="toc-text">3、 switch语句</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环语句"><span class="toc-number">1.6.</span> <span class="toc-text">循环语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、-for循环"><span class="toc-number">1.6.1.</span> <span class="toc-text">1、 for循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、while循环"><span class="toc-number">1.6.2.</span> <span class="toc-text">2、while循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、-do-while循环"><span class="toc-number">1.6.3.</span> <span class="toc-text">3、 do-while循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、-循环嵌套"><span class="toc-number">1.6.4.</span> <span class="toc-text">4、 循环嵌套</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、-break和continue关键字"><span class="toc-number">1.6.4.1.</span> <span class="toc-text">1、 break和continue关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、-循环嵌套"><span class="toc-number">1.6.4.2.</span> <span class="toc-text">2、 循环嵌套</span></a></li></ol></li></ol></li></ol></li></ol>
+           </div>
+           <script type="text/javascript">
+            function showToc(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:block");
+                show_toc_btn.setAttribute("style","display:none");
+                };
+            function showBtn(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:none");
+                show_toc_btn.setAttribute("style","display:block");
+                };
+           </script>
              
         <!-- 目录内容结束 -->
   
