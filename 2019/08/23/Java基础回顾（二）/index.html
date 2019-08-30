@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Java基础回顾（二） | 轻鸿日记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="Java基础回顾总结：数组，方法部分内容回顾">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础回顾（二）">
+<meta property="og:url" content="https://loyete.github.io/2019/08/23/Java基础回顾（二）/index.html">
+<meta property="og:site_name" content="轻鸿日记">
+<meta property="og:description" content="Java基础回顾总结：数组，方法部分内容回顾">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://loyete.github.io/2019/08/23/Java基础回顾（二）/img11.png">
+<meta property="og:image" content="https://loyete.github.io/2019/08/23/Java基础回顾（二）/img03.png">
+<meta property="og:image" content="https://loyete.github.io/2019/08/23/Java基础回顾（二）/img04.png">
+<meta property="og:image" content="https://loyete.github.io/2019/08/23/Java基础回顾（二）/img06.png">
+<meta property="og:image" content="https://loyete.github.io/2019/08/23/Java基础回顾（二）/img07.png">
+<meta property="og:updated_time" content="2019-08-30T09:28:06.060Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java基础回顾（二）">
+<meta name="twitter:description" content="Java基础回顾总结：数组，方法部分内容回顾">
+<meta name="twitter:image" content="https://loyete.github.io/2019/08/23/Java基础回顾（二）/img11.png">
+  
+    <link rel="alternate" href="/atom.xml" title="轻鸿日记" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-Java基础回顾（二）" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Java基础回顾（二）
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/23/Java基础回顾（二）/" class="article-date">
+  <time datetime="2019-08-23T12:04:37.000Z" itemprop="datePublished">2019-08-23</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="Java基础回顾总结："><a href="#Java基础回顾总结：" class="headerlink" title="Java基础回顾总结："></a>Java基础回顾总结：</h1><p>数组，方法部分内容回顾</p>
+<a id="more"></a>
+
+<h2 id="一-数组"><a href="#一-数组" class="headerlink" title="一. 数组"></a>一. 数组</h2><h3 id="1-数组的概念"><a href="#1-数组的概念" class="headerlink" title="1. 数组的概念"></a>1. 数组的概念</h3><p>保存多个具有相同数据类型元素的容器</p>
+<h3 id="2-数组定义格式"><a href="#2-数组定义格式" class="headerlink" title="2. 数组定义格式"></a>2. 数组定义格式</h3><ul>
+<li><strong>数据类型[] 数组名</strong></li>
+<li><strong>数据类型 数组名[]</strong></li>
+</ul>
+<h3 id="3-数组的初始化"><a href="#3-数组的初始化" class="headerlink" title="3. 数组的初始化"></a>3. 数组的初始化</h3><h4 id="1-动态初始化"><a href="#1-动态初始化" class="headerlink" title="1. 动态初始化"></a>1. 动态初始化</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数据类型[] 数组名 = new 数据类型[数组长度]</span></span><br><span class="line"><span class="comment">//eg:</span></span><br><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="2-静态初始化"><a href="#2-静态初始化" class="headerlink" title="2. 静态初始化"></a>2. 静态初始化</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数据类型[] 数组名 = &#123;具体元素&#125;;</span></span><br><span class="line"><span class="comment">//数据类型[] 数组名 = new 数据类型[]&#123;具体元素&#125;;</span></span><br><span class="line"><span class="comment">//eg:</span></span><br><span class="line">String[] arr = &#123;<span class="string">"hello"</span>,<span class="string">"world"</span>&#125;;</span><br><span class="line">String[] arr1 = <span class="keyword">new</span> String[]&#123;<span class="string">"hello"</span>,<span class="string">"world"</span>&#125;;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-数组元素"><a href="#4-数组元素" class="headerlink" title="4. 数组元素"></a>4. 数组元素</h3><h4 id="1-数组长度"><a href="#1-数组长度" class="headerlink" title="1. 数组长度"></a>1. 数组长度</h4><p>数组中元素的个数</p>
+<h4 id="2-索引"><a href="#2-索引" class="headerlink" title="2. 索引"></a>2. 索引</h4><p>索引从0开始，一直到数组长度-1</p>
+<h4 id="3-数组访问"><a href="#3-数组访问" class="headerlink" title="3. 数组访问"></a>3. 数组访问</h4><h5 id="1-数组名"><a href="#1-数组名" class="headerlink" title="1. 数组名"></a>1. 数组名</h5><p>直接写数组名得到的是数组的内存地址</p>
+<h5 id="2-元素访问"><a href="#2-元素访问" class="headerlink" title="2. 元素访问"></a>2. 元素访问</h5><p>数组名[索引]</p>
+<h4 id="4-数组的默认初始化值"><a href="#4-数组的默认初始化值" class="headerlink" title="4. 数组的默认初始化值"></a>4. 数组的默认初始化值</h4><ul>
+<li>整数类型：0</li>
+<li>浮点类型：0.0</li>
+<li>字符类型：空白字符</li>
+<li>布尔类型：false</li>
+<li>引用类型：null</li>
+</ul>
+<h3 id="5-内存"><a href="#5-内存" class="headerlink" title="5.内存"></a>5.内存</h3><h4 id="1-单个数组内存图解"><a href="#1-单个数组内存图解" class="headerlink" title="1. 单个数组内存图解"></a>1. 单个数组内存图解</h4><p><img src="//loyete.github.io/2019/08/23/Java基础回顾（二）/img11.png" alt="单个数组内存图解"></p>
+<h4 id="2-两个数组的内存图解"><a href="#2-两个数组的内存图解" class="headerlink" title="2. 两个数组的内存图解"></a>2. 两个数组的内存图解</h4><p><img src="//loyete.github.io/2019/08/23/Java基础回顾（二）/img03.png" alt="两个数组的内存图解"></p>
+<h4 id="3-多个数组指向相同内存空间"><a href="#3-多个数组指向相同内存空间" class="headerlink" title="3. 多个数组指向相同内存空间"></a>3. 多个数组指向相同内存空间</h4><p><img src="//loyete.github.io/2019/08/23/Java基础回顾（二）/img04.png" alt="多个数组指向相同内存空间"></p>
+<h3 id="6-应用"><a href="#6-应用" class="headerlink" title="6. 应用"></a>6. 应用</h3><h4 id="1-数组遍历"><a href="#1-数组遍历" class="headerlink" title="1. 数组遍历"></a>1. 数组遍历</h4><p>用for循环遍历</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</span><br><span class="line">    System.out.println(arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="二-方法"><a href="#二-方法" class="headerlink" title="二. 方法"></a>二. 方法</h2><h3 id="1-方法的概念"><a href="#1-方法的概念" class="headerlink" title="1.方法的概念"></a>1.方法的概念</h3><ul>
+<li>什么是方法<ul>
+<li>方法就是一段具有独立功能的代码块！</li>
+</ul>
+</li>
+<li>方法的好处<ul>
+<li>提高代码的复用性</li>
+<li>提高代码的维护性</li>
+</ul>
+</li>
+<li>方法的使用步骤<ul>
+<li>定义方法</li>
+<li>调用方法</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-方法的定义和调用"><a href="#2-方法的定义和调用" class="headerlink" title="2.方法的定义和调用"></a>2.方法的定义和调用</h3><ul>
+<li>定义格式</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//（参数可以没有，也可以是是多个，用逗号隔开）</span></span><br><span class="line">修饰符 返回值类型 方法名(参数类型 参数名)&#123;</span><br><span class="line">    方法体;</span><br><span class="line">    <span class="keyword">return</span> 返回值 ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>调用格式</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">方法名(参数名);</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>案例</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">5</span>;</span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">8</span>;</span><br><span class="line">        sum(a,b);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"a+b="</span>+(a+b));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-方法重载"><a href="#3-方法重载" class="headerlink" title="3. 方法重载"></a>3. 方法重载</h3><h4 id="1-方法重载的概念"><a href="#1-方法重载的概念" class="headerlink" title="1. 方法重载的概念"></a>1. 方法重载的概念</h4><ul>
+<li>同名的方法</li>
+</ul>
+<h4 id="2-规则"><a href="#2-规则" class="headerlink" title="2. 规则"></a>2. 规则</h4><ul>
+<li><p>在同一个类中</p>
+</li>
+<li><p>方法名必须相同</p>
+</li>
+<li><p>参数列表不同</p>
+<ul>
+<li>参数的数据类型不同</li>
+<li>个数不同</li>
+<li>类型的顺序不同</li>
+</ul>
+</li>
+<li><p>与返回值无关</p>
+</li>
+</ul>
+<h4 id="3-案例"><a href="#3-案例" class="headerlink" title="3. 案例"></a>3. 案例</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">5</span>;</span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">8</span>;</span><br><span class="line">        <span class="keyword">int</span> c = <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">double</span> d = <span class="number">2.0</span>;</span><br><span class="line">        sum(a,b);</span><br><span class="line">        sum(a,b,c);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"a+b="</span>+(a+b));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"a+b+c="</span>+(a+b+c));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">double</span> b)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"a+b="</span>+(a+b));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-方法参数传递"><a href="#4-方法参数传递" class="headerlink" title="4. 方法参数传递"></a>4. 方法参数传递</h3><h4 id="1-传递基本数据类型"><a href="#1-传递基本数据类型" class="headerlink" title="1. 传递基本数据类型"></a>1. 传递基本数据类型</h4><ul>
+<li><p>传递的是什么</p>
+<ul>
+<li>传递的是具体的数据值</li>
+</ul>
+</li>
+<li><p>特点是什么</p>
+<ul>
+<li>形式参数的改变不会影响实际参数</li>
+</ul>
+</li>
+<li><p>案例</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> x = <span class="number">3</span>;</span><br><span class="line">        System.out.println(<span class="string">"x="</span>+x);</span><br><span class="line">        function(x);</span><br><span class="line">        System.out.println(<span class="string">"x="</span>+x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">function</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">        x = x * <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>图解</p>
+<p><img src="//loyete.github.io/2019/08/23/Java基础回顾（二）/img06.png" alt></p>
+</li>
+</ul>
+<h4 id="2-传递引用数据类型"><a href="#2-传递引用数据类型" class="headerlink" title="2. 传递引用数据类型"></a>2. 传递引用数据类型</h4><ul>
+<li><p>传递的是什么</p>
+<ul>
+<li>传递的是对象的内存地址值</li>
+</ul>
+</li>
+<li><p>特点是什么</p>
+<ul>
+<li>形式参数的改变会影响实际参数的值</li>
+</ul>
+</li>
+<li><p>案例</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo04</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"></span><br><span class="line">        System.out.println(arr[<span class="number">2</span>]); <span class="comment">// 3</span></span><br><span class="line"></span><br><span class="line">        change(arr);</span><br><span class="line"></span><br><span class="line">        System.out.println(arr[<span class="number">2</span>]); <span class="comment">// 20</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        arr[<span class="number">2</span>] = <span class="number">20</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>图解<img src="//loyete.github.io/2019/08/23/Java基础回顾（二）/img07.png" alt></p>
+</li>
+<li><p>注意事项</p>
+<ul>
+<li>String虽然是一个引用数据类型，但是作为方法参数传递的时候，特点是和基本数据类型是一样的！</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/08/30/Java基础回顾（三）/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            Java基础回顾（三）
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/08/20/Java基础回顾（一）/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Java基础语法回顾（一）</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: 'Java基础回顾（二）',
+  owner: 'loyete',
+  repo: 'Comment',
+  oauth: {
+    client_id: 'e8591e38ffe0c0b0f9fa',
+    client_secret: '5f3f296d79cc144aac7a20ccda4ef6ccd9b4ae22',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+  <!-- 目录内容 -->
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java基础回顾总结："><span class="toc-number">1.</span> <span class="toc-text">Java基础回顾总结：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-数组"><span class="toc-number">1.1.</span> <span class="toc-text">一. 数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-数组的概念"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 数组的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-数组定义格式"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 数组定义格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-数组的初始化"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 数组的初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-动态初始化"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">1. 动态初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-静态初始化"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">2. 静态初始化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-数组元素"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 数组元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-数组长度"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">1. 数组长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-索引"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">2. 索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-数组访问"><span class="toc-number">1.1.4.3.</span> <span class="toc-text">3. 数组访问</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-数组名"><span class="toc-number">1.1.4.3.1.</span> <span class="toc-text">1. 数组名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-元素访问"><span class="toc-number">1.1.4.3.2.</span> <span class="toc-text">2. 元素访问</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-数组的默认初始化值"><span class="toc-number">1.1.4.4.</span> <span class="toc-text">4. 数组的默认初始化值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-内存"><span class="toc-number">1.1.5.</span> <span class="toc-text">5.内存</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-单个数组内存图解"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">1. 单个数组内存图解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-两个数组的内存图解"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">2. 两个数组的内存图解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-多个数组指向相同内存空间"><span class="toc-number">1.1.5.3.</span> <span class="toc-text">3. 多个数组指向相同内存空间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-应用"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. 应用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-数组遍历"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">1. 数组遍历</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-方法"><span class="toc-number">1.2.</span> <span class="toc-text">二. 方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-方法的概念"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.方法的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-方法的定义和调用"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.方法的定义和调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-方法重载"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 方法重载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-方法重载的概念"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">1. 方法重载的概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-规则"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">2. 规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-案例"><span class="toc-number">1.2.3.3.</span> <span class="toc-text">3. 案例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-方法参数传递"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. 方法参数传递</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-传递基本数据类型"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">1. 传递基本数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-传递引用数据类型"><span class="toc-number">1.2.4.2.</span> <span class="toc-text">2. 传递引用数据类型</span></a></li></ol></li></ol></li></ol></li></ol>
+           </div>
+           <script type="text/javascript">
+            function showToc(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:block");
+                show_toc_btn.setAttribute("style","display:none");
+                };
+            function showBtn(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:none");
+                show_toc_btn.setAttribute("style","display:block");
+                };
+           </script>
+             
+        <!-- 目录内容结束 -->
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.webp" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        冷雨轻鸿
+      
+    </h3>
+    <p class="avatar-slogan">
+      一个安静的疯子
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建；小白技术/">博客搭建；小白技术</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/博客搭建；小白技术/" style="font-size: 10px;">博客搭建；小白技术</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/30/Java基础回顾（三）/">Java基础回顾（三）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/23/Java基础回顾（二）/">Java基础回顾（二）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/20/Java基础回顾（一）/">Java基础语法回顾（一）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/记一次hexo-github搭建个人博客/">记一次hexo+github搭建个人博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://num66.cn" title target='_blank'
+        >冷雨轻鸿</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Loyete &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">您是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
